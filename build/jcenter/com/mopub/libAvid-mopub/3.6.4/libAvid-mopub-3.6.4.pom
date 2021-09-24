@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.mopub</groupId>
+  <artifactId>libAvid-mopub</artifactId>
+  <version>3.6.4</version>
+  <name>AVID SDK (MoPub Android namespace)</name>
+  <url>https://github.com/mopub/mopub-android-sdk</url>
+  <licenses>
+    <license>
+      <name>MoPub SDK License</name>
+      <url>http://www.mopub.com/legal/sdk-license-agreement/</url>
+    </license>
+  </licenses>
+  <scm>
+    <connection>https://github.com/mopub/mopub-android-sdk.git</connection>
+    <developerConnection>https://github.com/mopub/mopub-android-sdk.git</developerConnection>
+    <url>https://github.com/mopub/mopub-android-sdk</url>
+  </scm>
+</project>

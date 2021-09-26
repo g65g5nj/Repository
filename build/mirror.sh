@@ -7,7 +7,7 @@ if [ `uname` = "Darwin" ]; then
 	#mac will add "/"
 	DIR_LENGTH=$((DIR_LENGTH+1))
 fi
-rm -rf ${SHPATH}/jcenter/*
+# rm -rf ${SHPATH}/jcenter/*
 find ${DIR} -type f | grep -Ev "DS_Store" | while read line
 do
 	SRC=${line}

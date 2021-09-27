@@ -56,9 +56,12 @@ def fixed_writexml(self, writer, indent="", addindent="", newl=""):
 minidom.Element.writexml = fixed_writexml
 
 home = os.path.expanduser('~')
-settingPath = os.path.join(home,".m2","setting.xml")
+settingPath = os.path.join(home,".m2","settings.xml")
 if not os.path.exists(settingPath):
-    dirPath = settingPath[:settingPath.rfind('/')]
+    i = settingPath.rfind('/')
+    if i < 0:
+        i = settingPath.rfind('\\')
+    dirPath = settingPath[:i]
     if not os.path.exists(dirPath):
         os.makedirs(dirPath)
     doc = minidom.Document()

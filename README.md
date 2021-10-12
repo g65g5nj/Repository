@@ -18,6 +18,7 @@ jcenter -- 完整第三方依赖
 #### 安装教程
 
 在build目录下打开命令行，运行 python setup.py
+出现 setup local maven repository successful!表示成功
 
 #### 使用说明
 

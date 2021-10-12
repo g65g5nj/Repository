@@ -55,24 +55,33 @@ def fixed_writexml(self, writer, indent="", addindent="", newl=""):
  
 minidom.Element.writexml = fixed_writexml
 
-home = os.path.expanduser('~')
-dirPath = os.path.join(home,".m2")
-settingPath = os.path.join(dirPath,"settings.xml")
-if not os.path.exists(settingPath):
-    if not os.path.exists(dirPath):
-        os.makedirs(dirPath)
-    doc = minidom.Document()
-else:
-    doc = minidom.parse(settingPath)
+def setup():
+    global localDir
+    home = os.path.expanduser('~')
+    dirPath = os.path.join(home,".m2")
+    settingPath = os.path.join(dirPath,"settings.xml")
+    if not os.path.exists(settingPath):
+        if not os.path.exists(dirPath):
+            os.makedirs(dirPath)
+        doc = minidom.Document()
+    else:
+        doc = minidom.parse(settingPath)
 
-settings = getOrCreateElement(doc,doc,'settings')
-localRepository = getOrCreateElement(doc,settings,'localRepository')
+    settings = getOrCreateElement(doc,doc,'settings')
+    localRepository = getOrCreateElement(doc,settings,'localRepository')
 
-setOrCreateTextNode(doc,localRepository,os.path.join(localDir,'jcenter'))
-settings.setAttribute("xmlns","http://maven.apache.org/SETTINGS/1.2.0")
-settings.setAttribute("xmlns:xsi","http://www.w3.org/2001/XMLSchema-instance")
-settings.setAttribute("xsi:schemaLocation","http://maven.apache.org/SETTINGS/1.2.0 https://maven.apache.org/xsd/settings-1.2.0.xsd")
+    setOrCreateTextNode(doc,localRepository,os.path.join(localDir,'jcenter'))
+    settings.setAttribute("xmlns","http://maven.apache.org/SETTINGS/1.2.0")
+    settings.setAttribute("xmlns:xsi","http://www.w3.org/2001/XMLSchema-instance")
+    settings.setAttribute("xsi:schemaLocation","http://maven.apache.org/SETTINGS/1.2.0 https://maven.apache.org/xsd/settings-1.2.0.xsd")
 
-with open(settingPath,mode='w+') as f:
-    doc.writexml(f,indent='',addindent='\t',newl='\n',encoding='UTF-8')
-    f.close()
+    with open(settingPath,mode='w+') as f:
+        doc.writexml(f,indent='',addindent='\t',newl='\n',encoding='UTF-8')
+        f.close()
+
+if __name__ == "__main__":
+    try:
+        setup()
+        print("setup local maven repository successful!")
+    except Exception as e:
+        print(e)

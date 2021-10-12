@@ -22,7 +22,10 @@ URLS=[
     'https://artifact.bytedance.com/repository/pangle/',
     'https://android-sdk.is.com/',
 
-    "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea/"
+    "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea/",
+
+    # "http://maven.aliyun.com/nexus/content/groups/public/",
+    # "http://maven.aliyun.com/nexus/content/repositories/central/",
 ]
 
 process = subprocess.Popen(args=[

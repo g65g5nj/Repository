@@ -1,0 +1,249 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.iqzone",
+    "module": "adslib-hummingbird-release",
+    "version": "2.3.2211",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.5",
+      "buildId": "rokhzlknmzfflnergwtinop7hq"
+    }
+  },
+  "variants": [
+    {
+      "name": "runtime",
+      "attributes": {
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.iqzone.thirdparty",
+          "module": "omsdk",
+          "version": {
+            "requires": "1.3.22"
+          },
+          "excludes": [
+            {
+              "group": "com.android.support",
+              "module": "*"
+            },
+            {
+              "group": "com.google.android.gms",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "com.iqzone.thirdparty",
+          "module": "ogury",
+          "version": {
+            "requires": "5.0.9"
+          },
+          "excludes": [
+            {
+              "group": "com.android.support",
+              "module": "*"
+            },
+            {
+              "group": "com.google.android.gms",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "com.iqzone.thirdparty",
+          "module": "wl-sa",
+          "version": {
+            "requires": "4.8.7"
+          },
+          "excludes": [
+            {
+              "group": "com.android.support",
+              "module": "*"
+            },
+            {
+              "group": "com.google.android.gms",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "com.iqzone.thirdparty",
+          "module": "wl-vrv",
+          "version": {
+            "requires": "2.4.7"
+          }
+        },
+        {
+          "group": "com.tapjoy",
+          "module": "tapjoy-android-sdk",
+          "version": {
+            "requires": "12.8.1"
+          },
+          "excludes": [
+            {
+              "group": "com.android.support",
+              "module": "*"
+            },
+            {
+              "group": "com.google.android.gms",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "dependencyConstraints": [
+        {
+          "group": "com.squareup.okhttp3",
+          "module": "okhttp",
+          "version": {
+            "requires": "3.12.0"
+          },
+          "reason": "Version 3.10 pulled from picassoDependencies affects Vungle dependency which needs OKHTTP 3.12.0"
+        },
+        {
+          "group": "androidx.annotation",
+          "module": "annotation",
+          "version": {
+            "requires": "1.1.0"
+          },
+          "reason": "Version 1.0.0 pulled from picassoDependencies causes conflict with Mopub which uses 1.1.0 version"
+        },
+        {
+          "group": "androidx.core",
+          "module": "core",
+          "version": {
+            "requires": "1.3.0"
+          },
+          "reason": "Version 1.0.0 pulled from googleAdmobDependencies causes conflict with Mopub which uses 1.1.0 version"
+        },
+        {
+          "group": "androidx.media",
+          "module": "media",
+          "version": {
+            "requires": "1.2.0"
+          },
+          "reason": "Version 1.0.0 pulled from googleAdmobDependencies causes conflict with Mopub which uses 1.1.0 version"
+        },
+        {
+          "group": "com.google.android.gms",
+          "module": "play-services-basement",
+          "version": {
+            "requires": "17.0.0"
+          },
+          "reason": "Version 8.3.0 pulled from tapjoyDependencies causes conflict with Admob which uses 17.0.0 version"
+        }
+      ],
+      "files": [
+        {
+          "name": "adslib-hummingbird-release-2.3.2211.aar",
+          "url": "adslib-hummingbird-release-2.3.2211.aar",
+          "size": 1626675,
+          "sha512": "6d091f4bf8878472732726e177f2daaf8f083db79246772ecdf0bbe960a4050bd40f49ddbd3d683cb39f03a4e0a8bcde21dc0fec203e94c022d7c37afa536888",
+          "sha256": "c2239851b7b01890e2ecccfb3f26d0e0d00439690d09838f5dbe96f138938b73",
+          "sha1": "d84c5d27e96fb8c4b5fbeb06f254ff6f1da8928a",
+          "md5": "52d3655867ea34d3b36227283a060eb3"
+        }
+      ]
+    },
+    {
+      "name": "api",
+      "attributes": {
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.iqzone.thirdparty",
+          "module": "omsdk",
+          "version": {
+            "requires": "1.3.22"
+          },
+          "excludes": [
+            {
+              "group": "com.android.support",
+              "module": "*"
+            },
+            {
+              "group": "com.google.android.gms",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "com.iqzone.thirdparty",
+          "module": "ogury",
+          "version": {
+            "requires": "5.0.9"
+          },
+          "excludes": [
+            {
+              "group": "com.android.support",
+              "module": "*"
+            },
+            {
+              "group": "com.google.android.gms",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "com.iqzone.thirdparty",
+          "module": "wl-sa",
+          "version": {
+            "requires": "4.8.7"
+          },
+          "excludes": [
+            {
+              "group": "com.android.support",
+              "module": "*"
+            },
+            {
+              "group": "com.google.android.gms",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "com.iqzone.thirdparty",
+          "module": "wl-vrv",
+          "version": {
+            "requires": "2.4.7"
+          }
+        },
+        {
+          "group": "com.tapjoy",
+          "module": "tapjoy-android-sdk",
+          "version": {
+            "requires": "12.8.1"
+          },
+          "excludes": [
+            {
+              "group": "com.android.support",
+              "module": "*"
+            },
+            {
+              "group": "com.google.android.gms",
+              "module": "*"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "adslib-hummingbird-release-2.3.2211.aar",
+          "url": "adslib-hummingbird-release-2.3.2211.aar",
+          "size": 1626675,
+          "sha512": "6d091f4bf8878472732726e177f2daaf8f083db79246772ecdf0bbe960a4050bd40f49ddbd3d683cb39f03a4e0a8bcde21dc0fec203e94c022d7c37afa536888",
+          "sha256": "c2239851b7b01890e2ecccfb3f26d0e0d00439690d09838f5dbe96f138938b73",
+          "sha1": "d84c5d27e96fb8c4b5fbeb06f254ff6f1da8928a",
+          "md5": "52d3655867ea34d3b36227283a060eb3"
+        }
+      ]
+    }
+  ]
+}

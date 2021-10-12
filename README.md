@@ -6,9 +6,13 @@
 #### 软件架构
 
 setup.py -- 安装脚本
+
 fix_aar_caches.py -- 修复aar依赖文件pom
+
 mirror.sh -- 从缓存文件生成完整依赖
+
 caches -- 缓存源文件
+
 jcenter -- 完整第三方依赖
 
 #### 安装教程
